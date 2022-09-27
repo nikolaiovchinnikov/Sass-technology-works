@@ -1,0 +1,261 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+    display: block
+
+body
+    line-height: 1
+
+ol, ul
+    list-style: none
+
+blockquote, q
+    quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+    content: ''
+    content: none
+
+table
+    border-collapse: collapse
+    border-spacing: 0
+=LG 
+    @media screen and (max-width: 1047px)
+        @content
+=MD
+    @media screen and (max-width: 768px)
+        @content
+=SM
+    @media screen and (max-width: 460px)
+        @content
+.contener
+    min-height: 1000px
+    padding-top: 1px
+    max-width: 1140px
+    margin: 0 auto
+    &LightPurple
+        background-color: rgba(94, 35, 157, 1)
+    &DarkPurple
+        background-color: rgba(48, 18, 78, 1)
+    &fontColorWhite
+        color: rgba(252, 252, 252, 1)
+    &fontColorBlack
+        color: rgba(48, 35, 61, 1)
+
+.header
+    font-family: Arial, Helvetica, sans-serif
+    &BoxTitle
+        display: flex
+        flex-direction: column
+        margin: 180px 0 60px 10px
+        min-height: auto
+        font-style: normal
+        &Top
+            margin-bottom: 12px
+            font-weight: 800
+            font-size: 12.6px
+            letter-spacing: 6px
+            text-transform: uppercase
+            color:  rgba(246, 16, 103, 1)
+        &Bottom
+            max-width: 754px
+            font-weight: 500
+            font-size: 32px
+            line-height: 40px
+
+.boxItems
+    display: flex
+    justify-content: space-between
+    list-style-position: inside
+    +LG
+        flex-direction: column
+        
+
+    &ColorText
+        color: #F61067
+    &number
+        list-style-type: decimal-leading-zero
+    &BgColor:hover
+        color: rgba(252, 252, 252, 1) 
+        background-color: rgba(246, 16, 103, 1)
+    &AtomImg
+        list-style-image: url(../images_disaine/Icon2.svg)
+    &AtomImgWhite
+        list-style-image: url(../images_disaine/Icon.svg)
+    &Config
+        display: flex
+        flex-direction: column
+        justify-content: center
+        border: 1px solid rgba(246, 16, 103, 0.5)
+        width: 362px
+        min-height: 362px
+        +LG
+            margin: 30px 0 30px 100px
+            width: 500px
+        +MD
+            margin: 30px auto 30px auto
+            max-width: 95%
+        .margin
+            margin-left: 36px
+    &Title
+        margin-top: 18px
+        font-style: normal
+        font-weight: 500
+        font-size: 27px
+        line-height: 40px
+        &White
+            color: rgba(252, 252, 252, 1)
+    &Paragraf
+        width: 290px
+        margin-top: 12px
+        margin-left: 36px
+        font-weight: 400
+        font-size: 16.2px
+        line-height: 26px
+        +LG
+            width: auto
+        &White
+            color: rgba(252, 252, 252, 1)
+.footer
+    padding: 1px
+    min-height: 555px
+    font-family: Arial, Helvetica, sans-serif
+    color: #FCFCFC
+    background-color: #150433
+    &Contener
+        display: flex
+        justify-content: space-between
+        max-width: 1140px
+        margin: 73px auto
+        min-height: auto
+        +MD
+            flex-wrap: wrap
+    &BoxItems:nth-child(4)
+        width: 256px
+        +MD
+            width: auto
+            margin-right: 25px
+
+    &BoxItems:nth-child(3) &BoxTitle,&BoxItems:nth-child(2) &BoxTitle,&BoxItems:nth-child(4) &BoxTitle
+        +SM
+            font-size: 9px
+            margin-bottom: 10px
+    &BoxItems:nth-child(2)
+        +MD
+            margin-left: 25px
+
+    &BoxItems:nth-child(1),&BoxItems:nth-child(5)
+        margin: 0 10px
+    &BoxItems:nth-child(5) &BoxTitle
+        +MD
+            font-size: 20px
+    &BoxTitle:nth-child(1),&BoxTitle:nth-child(2),&BoxTitle:nth-child(3)
+        margin-right: 20px
+        +SM
+            margin-right: 10px
+            letter-spacing: 3px
+    &BoxItems:nth-child(5)
+        width: 264px
+        +MD
+            margin: 0 auto 100px auto
+            width: 657px
+            text-align: center
+        +SM
+            margin-top: 50px
+    &BoxItems:nth-child(1)
+        width: 166px
+        +MD
+            margin: 0 auto 100px auto
+            width: 690px
+            text-align: center
+    &BoxTitle
+        font-style: normal
+        font-weight: 800
+        font-size: 12.6px
+        line-height: 26px
+        letter-spacing: 6px
+        text-transform: uppercase
+        margin-bottom: 35px
+        
+.boxLink
+    display: flex
+    flex-direction: column
+
+.link
+    font-style: normal
+    font-weight: 700
+    font-size: 12.6px
+    line-height: 28px
+    letter-spacing: 1px
+    margin-bottom: 20px
+    color: #FCFCFC
+    text-decoration: none
+    +SM
+        font-size: 9px
+        margin-bottom: 0
+        position: relative
+        &::before
+            content: ""
+            background-image: url(../images_disaine/free-icon-arrow-down-6719918.png)
+            background-size: contain
+            background-repeat: no-repeat
+            display: inline-block
+            width: 11px
+            height: 11px
+            position: relative
+            top: 2px
+            right: 2px
+        &:hover::before
+            box-shadow: 0 0 10px white
+            border-radius: 50%
+        
+.footerBoxParagraf
+    font-style: normal
+    font-weight: 400
+    font-size: 16.2px
+    line-height: 26px
+.footerBoxMainTitle
+    font-style: normal
+    font-weight: 900
+    font-size: 24px
+    line-height: 43px
+    letter-spacing: 2px
+.imgBox
+    display: flex
+    justify-content: space-between
+.linkImg 
+    display: flex
+    align-items: center
+    font-style: normal
+    font-weight: 400
+    font-size: 16.2px
+    line-height: 26px
+    color: #FCFCFC
+    text-decoration: none
+    +SM
+        font-size: 11px
+.by
+    text-align: center
+    margin-bottom: 50px
